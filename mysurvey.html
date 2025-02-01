@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles5.css">
+   </head>
+   <body>
+     <header>
+       <h1 id="title">Survey Form</h1>
+       <p id="description">Please fill out this form with valid information</p>
+      </header>
+
+      <main>
+        <form action="/submit.url" method="post" id="survey-form">
+          <fieldset>
+            <label for="name" id="name-label">Enter Your Full Name</label>
+          <input id="name" type="text" name="name" placeholder="Your Name" required>
+          <label for="email" id="email-label">Enter Your Email</label>
+          <input id="email" type="email" name="email" placeholder="e.g.sth12@gmail.com" required>
+          <label for="number" id="number-label">Rate us</label>
+          <input id="number" type="number" min=1 max=10 name="Rating" placeholder="1-10" required>
+          <label for="dropdown">Enter Your gender
+            <select id="dropdown">
+              <option value="">(select one)</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Your Authority</legend>
+          <label for="admin"><input type="radio" name="who" id="admin" value="admin">Admin</label><br>
+          <label for="user"><input type="radio" name="who" id="user" value="user" checked>User</label>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Your view on this web design</legend>
+               <input type="Checkbox" name="view" value="Bad" id="bad"> <label for="bad">Bad</label>
+               <input type="Checkbox" name="view" value="Decent" id="Decent"> <label for="Decent">Decent</label>
+               <input type="Checkbox" name="view" value="Good" id="good"> <label for="good">Good</label>
+          </fieldset>
+          <fieldset>
+            <label for="suggestion">Give your suggestion</label><textarea id="suggestion"rows="3" cols="30" placeholder="share your thoughts on this form"></textarea>
+          </fieldset>
+          <button id="submit" type="submit">Submit</button>
+        </form>
+      </main>
+   </body>
+</html>
